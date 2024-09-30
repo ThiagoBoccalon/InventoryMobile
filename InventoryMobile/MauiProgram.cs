@@ -1,4 +1,5 @@
 ﻿using InventoryMobile.Repositories.Login;
+using InventoryMobile.Repositories.Signup;
 
 namespace InventoryMobile;
 
@@ -18,11 +19,14 @@ public static class MauiProgram
 
 		builder.Services.AddTransient<MainViewModel>();
         builder.Services.AddTransient<LoginViewModel>();
+		builder.Services.AddTransient<SignupViewModel>();
 
         builder.Services.AddTransient<MainPage>();
         builder.Services.AddTransient<LoginPage>();
+		builder.Services.AddTransient<SignupPage>();
 
         builder.Services.AddScoped<ILoginRepository, LoginRepository>();
+		builder.Services.AddScoped<ISignupRepository, SignupRepository>();
 
 		return builder.Build();
 	}

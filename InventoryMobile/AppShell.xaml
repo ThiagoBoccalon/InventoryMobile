@@ -9,6 +9,6 @@
         Title="Main"
         ContentTemplate="{DataTemplate views:LoginPage}"
         Route="LoginPage"
-        Shell.NavBarHasShadow="False" />
+        Shell.NavBarIsVisible="False" />
 
 </Shell>
