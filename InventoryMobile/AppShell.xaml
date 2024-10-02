@@ -11,4 +11,14 @@
         Route="LoginPage"
         Shell.NavBarIsVisible="False" />
 
+    <FlyoutItem Title="Products">
+        <Tab>
+            <ShellContent
+                Title="Products"
+                ContentTemplate="{DataTemplate views:ProductsPage}"
+                Route="ProductsPage"
+                Shell.NavBarIsVisible="True" />
+        </Tab>
+    </FlyoutItem>
+
 </Shell>

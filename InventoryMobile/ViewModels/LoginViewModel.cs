@@ -53,6 +53,9 @@ namespace InventoryMobile.ViewModels
                 toast.Show();
                 return;
             }
+
+            Preferences.Set("token", result.AcessToken);
+            await Shell.Current.GoToAsync($"//{nameof(ProductsPage)}");
         }
     }
 }
