@@ -13,7 +13,7 @@ public partial class AddProductPage : ContentPage
     {
         MainThread.BeginInvokeOnMainThread(() =>
         {
-            _viewModel.Codebar = args.Result[0].Text;
+            _viewModel.Barcode = args.Result[0].Text;
         });
     }
 

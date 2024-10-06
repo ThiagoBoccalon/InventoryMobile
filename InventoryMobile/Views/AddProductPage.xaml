@@ -12,7 +12,7 @@
             Padding="20"
             RowDefinitions="auto,auto,auto,auto,*,auto,auto"
             RowSpacing="10">
-            <Entry Placeholder="code to scan" Text="{Binding Codebar}" />
+            <Entry Placeholder="code to scan" Text="{Binding Barcode}" />
             <Entry
                 Grid.Row="1"
                 Keyboard="Numeric"

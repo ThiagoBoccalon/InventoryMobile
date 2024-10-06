@@ -26,7 +26,7 @@ namespace InventoryMobile.Repositories.Product
                 .GetJsonAsync<IEnumerable<ProductResponse>>();
         }
 
-        public async Task<ProductResponse> GetProductBarCodeAsync(string barcode)
+        public async Task<ProductResponse> GetProductByBarCodeAsync(string barcode)
         {
             return await Constants.ApiUrl
                 .AppendPathSegment($"/products/{barcode}")

@@ -18,7 +18,7 @@ namespace InventoryMobile.Contracts
 
             Requires()
 
-                .IsNotNullOrEmpty(productRequest.CodeBar, nameof(productRequest.CodeBar), "Code bar cannot be empty");
+                .IsNotNullOrEmpty(productRequest.BarCode, nameof(productRequest.BarCode), "Code bar cannot be empty");
 
             Requires()
                 .IsGreaterThan(productRequest.Price, 0, nameof(productRequest.Price), "The price have to be greater than zero");

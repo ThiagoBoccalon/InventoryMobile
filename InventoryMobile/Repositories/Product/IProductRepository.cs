@@ -1,10 +1,5 @@
 ﻿using InventoryMobile.Models.Request;
 using InventoryMobile.Models.Response;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InventoryMobile.Repositories.Product
 {
@@ -13,6 +8,6 @@ namespace InventoryMobile.Repositories.Product
         Task<IEnumerable<ProductResponse>> GetProductAsync();
         Task<bool> AddAsync(ProductRequest productRequest);
         Task<bool> UpdateAsync(ProductRequest productRequest);
-        Task<ProductResponse> GetProductBarCodeAsync(string barcode);
+        Task<ProductResponse> GetProductByBarCodeAsync(string barcode);
     }
 }

@@ -9,7 +9,7 @@ namespace InventoryMobile.ViewModels
     public partial class AddProductViewModel : BaseViewModel
     {
         [ObservableProperty]
-        string codebar;
+        string barcode;
 
         [ObservableProperty]
         string description;
@@ -33,7 +33,7 @@ namespace InventoryMobile.ViewModels
             var productRequest = new ProductRequest(
                 Description,
                 Storage.Value,
-                Codebar,
+                Barcode,
                 "Unit",
                 Price.Value,
                 DateTime.Now
