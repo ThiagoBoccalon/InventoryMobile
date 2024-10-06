@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace InventoryMobile.ViewModels
 {
-    public class ProductsViewModel : BaseViewModel
+    public partial class ProductsViewModel : BaseViewModel
     {
         public ObservableCollection<ProductResponse> Products { get; set; }
             = new ObservableCollection<ProductResponse>();
@@ -34,5 +34,9 @@ namespace InventoryMobile.ViewModels
 
             IsBusy = false;
         }
+
+        [RelayCommand]
+        public async Task GoToAddProduct()
+            => await Shell.Current.GoToAsync(nameof(GoToAddProduct));
     }
 }
