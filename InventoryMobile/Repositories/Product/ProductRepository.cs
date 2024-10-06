@@ -26,9 +26,22 @@ namespace InventoryMobile.Repositories.Product
                 .GetJsonAsync<IEnumerable<ProductResponse>>();
         }
 
-        public Task<bool> UpdateAsync(ProductRequest productRequest)
+        public async Task<ProductResponse> GetProductBarCodeAsync(string barcode)
         {
-            throw new NotImplementedException();
+            return await Constants.ApiUrl
+                .AppendPathSegment($"/products/{barcode}")
+                .WithOAuthBearerToken(Preferences.Get("token", string.Empty))
+                .GetJsonAsync<ProductResponse>();
+        }
+
+        public async Task<bool> UpdateAsync(ProductRequest productRequest)
+        {
+            var response = await Constants.ApiUrl
+                .AppendPathSegment($"/product/{productRequest.ProductId}")
+                .WithOAuthBearerToken(Preferences.Get("token", string.Empty))
+                .PutJsonAsync(productRequest);
+
+            return response.ResponseMessage.IsSuccessStatusCode;
         }
     }
 }

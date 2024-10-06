@@ -13,5 +13,6 @@ namespace InventoryMobile.Repositories.Product
         Task<IEnumerable<ProductResponse>> GetProductAsync();
         Task<bool> AddAsync(ProductRequest productRequest);
         Task<bool> UpdateAsync(ProductRequest productRequest);
+        Task<ProductResponse> GetProductBarCodeAsync(string barcode);
     }
 }
