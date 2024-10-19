@@ -17,11 +17,11 @@
     </ContentPage.Resources>
 
     <ScrollView>
-        <Grid RowDefinitions="300, *, auto, auto">
+        <Grid Padding="-2" RowDefinitions="300, *, auto, auto">
             <Image HeightRequest="150" Source="logo.png" />
             <Border
                 Grid.Row="1"
-                Padding="20,40,20,0"
+                Padding="22.5,40,22.5,0"
                 BackgroundColor="White">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="30,30,0,0" />
@@ -74,7 +74,11 @@
                         FontSize="Medium"
                         HorizontalOptions="Center"
                         Text="Register now!"
-                        TextColor="Black" />
+                        TextColor="Black">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GoToSignupCommand}" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
 
                 </VerticalStackLayout>
             </Border>

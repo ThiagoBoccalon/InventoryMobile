@@ -9,6 +9,26 @@
         Title="Main"
         ContentTemplate="{DataTemplate views:LoginPage}"
         Route="LoginPage"
-        Shell.NavBarHasShadow="False" />
+        Shell.NavBarIsVisible="False" />
+
+    <FlyoutItem Title="Products">
+        <Tab>
+            <ShellContent
+                Title="Products"
+                ContentTemplate="{DataTemplate views:ProductsPage}"
+                Route="ProductsPage"
+                Shell.NavBarIsVisible="True" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Inventory Control">
+        <Tab>
+            <ShellContent
+                Title="Inventory Control"
+                ContentTemplate="{DataTemplate views:EditProdutPage}"
+                Route="EditProductPage"
+                Shell.NavBarIsVisible="True" />
+        </Tab>
+    </FlyoutItem>
 
 </Shell>

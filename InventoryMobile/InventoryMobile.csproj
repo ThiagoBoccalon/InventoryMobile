@@ -50,6 +50,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Camera.MAUI" Version="1.5.1" />
 	  <PackageReference Include="CommunityToolkit.Maui" Version="6.1.0" />
 	  <PackageReference Include="CommunityToolkit.MVVM" Version="8.2.2" />
 	  <PackageReference Include="Flunt" Version="2.0.5" />
@@ -58,7 +59,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\ProductsPage.xaml.cs">
+	    <DependentUpon>ProductsPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\AddProductPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\EditProdutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ProductsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SignupPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

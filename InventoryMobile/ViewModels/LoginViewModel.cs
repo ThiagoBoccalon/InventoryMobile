@@ -21,6 +21,12 @@ namespace InventoryMobile.ViewModels
         }
 
         [RelayCommand]
+        public async Task GoToSignup() 
+            =>  await Shell.Current.GoToAsync(nameof(SignupPage));
+        
+             
+
+        [RelayCommand]
         public async Task Login()
         {
             var loginRequest = new LoginRequest(Email, Password);
@@ -47,6 +53,9 @@ namespace InventoryMobile.ViewModels
                 toast.Show();
                 return;
             }
+
+            Preferences.Set("token", result.AcessToken);
+            await Shell.Current.GoToAsync($"//{nameof(ProductsPage)}");
         }
     }
 }
