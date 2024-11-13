@@ -8,6 +8,6 @@ namespace InventoryMobile.Helpers
 {
     public class Constants
     {
-        public static string ApiUrl = "https://products-api-luisdev.azurewebsites.net/api";
+        public static string ApiUrl = "http://10.0.2.2:5276/api";
     }
 }
